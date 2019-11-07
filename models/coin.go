@@ -16,6 +16,7 @@ type Coin struct {
 	Delegated             uint64     `json:"delegated"`
 	Name                  string     `json:"name"            sql:"type:varchar(255)"`
 	Symbol                string     `json:"symbol"          sql:"type:varchar(20)"`
+	CreatedAt             time.Time  `json:"created_at"`
 	UpdatedAt             time.Time  `json:"updated_at"`
 	DeletedAt             *time.Time `json:"deleted_at"      pg:",soft_delete"`
 
