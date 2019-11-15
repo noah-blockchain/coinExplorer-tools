@@ -1,6 +1,7 @@
 package models
 
 import (
+	"fmt"
 	"time"
 )
 
@@ -22,8 +23,12 @@ type Coin struct {
 	CreatedAt             time.Time  `json:"created_at"`
 	UpdatedAt             time.Time  `json:"updated_at"`
 	DeletedAt             *time.Time `json:"deleted_at"      pg:",soft_delete"`
-	Description           string     `json:"description"`
-	IconURL               string     `json:"icon_url"`
+	Description           string     `json:"description"     sql:"type:varchar(1024)"`
+	IconURL               string     `json:"icon_url"        sql:"type:varchar(255)"`
 
 	Address string `json:"address" sql:"-"`
+}
+
+func (c Coin) GetAddress() string {
+	return fmt.Sprintf("NOAHx%s", c.Address)
 }
