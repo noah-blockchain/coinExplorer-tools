@@ -14,6 +14,9 @@ type Coin struct {
 	Price                 string     `json:"price"           sql:"type:numeric(100)"`
 	Capitalization        string     `json:"capitalization"  sql:"type:numeric(100)"`
 	Delegated             uint64     `json:"delegated"`
+	StartVolume           string     `json:"start_volume"          sql:"type:numeric(70)"`
+	StartReserveBalance   string     `json:"start_reserve_balance" sql:"type:numeric(70)"`
+	StartPrice            string     `json:"start_price"           sql:"type:numeric(100)"`
 	Name                  string     `json:"name"            sql:"type:varchar(255)"`
 	Symbol                string     `json:"symbol"          sql:"type:varchar(20)"`
 	CreatedAt             time.Time  `json:"created_at"`
