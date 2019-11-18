@@ -26,7 +26,8 @@ type Validator struct {
 	OwnerAddress         *Address   `json:"owner_address"  pg:"fk:owner_address_id"`
 	Stakes               []*Stake   `json:"stakes"`
 	Uptime               *float64   `json:"uptime"`
-	CreatedAt            *time.Time `json:"created_at"`
+	CreatedAt            time.Time  `json:"created_at"`
+	UpdatedAt            *time.Time `json:"created_at"`
 }
 
 //Return validators PK with prefix
