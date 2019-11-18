@@ -12,6 +12,7 @@ type Address struct {
 	Slashes             []*Slash              `json:"slashes"`                                      //relation has many to Slashes
 	Transactions        []*Transaction        `json:"transactions" pg:"fk:from_address_id"`         //relation has many to Transactions
 	InvalidTransactions []*InvalidTransaction `json:"invalid_transactions" pg:"fk:from_address_id"` //relation has many to InvalidTransactions
+	CreatedAt           time.Time             `json:"created_at"`
 }
 
 // Return address with prefix
