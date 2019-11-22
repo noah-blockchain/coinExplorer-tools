@@ -27,6 +27,7 @@ type Validator struct {
 	Stakes               []*Stake   `json:"stakes"`
 	Uptime               *float64   `json:"uptime"`
 	CreatedAt            time.Time  `json:"created_at"`
+	CountDelegators      *uint64    `json:"count_delegators"`
 }
 
 //Return validators PK with prefix
