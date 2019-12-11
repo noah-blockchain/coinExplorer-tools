@@ -1,4 +1,4 @@
-package consts
+package helpers
 
 const (
 	CoinCreatedSubject = "CoinCreatedSubject"
