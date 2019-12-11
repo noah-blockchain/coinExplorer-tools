@@ -1,6 +1,7 @@
 package models
 
-type ExtenderEnvironment struct { // todo wsLink
+type ExtenderEnvironment struct {
+	// todo wsLink
 	AppName                         string
 	BaseCoin                        string
 	CoinsUpdateTime                 int
@@ -35,4 +36,6 @@ type ExtenderEnvironment struct { // todo wsLink
 	WrkUpdateTxsIndexTime           int
 	RewardAggregateEveryBlocksCount int
 	RewardAggregateTimeInterval     string
+	NatsClusterID                   string
+	NatsAddr                        string
 }

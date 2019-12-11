@@ -30,7 +30,7 @@ type Validator struct {
 	CountDelegators      *uint64    `json:"count_delegators"`
 }
 
-//Return validators PK with prefix
+//Return validatyors PK with prefix
 func (v Validator) GetPublicKey() string {
 	return `Np` + v.PublicKey
 }
