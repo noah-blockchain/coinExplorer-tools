@@ -1,0 +1,13 @@
+syntax = "proto3";
+package coin_extender;
+
+import "google/protobuf/timestamp.proto";
+
+message Coin {
+    string symbol = 1;
+    string price = 2;
+    string capitalization = 3;
+    string reserve_balance = 4;
+    string volume = 5;
+    google.protobuf.Timestamp created_at = 6;
+}
