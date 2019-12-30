@@ -1,5 +1,6 @@
 package helpers
 
 const (
-	CoinCreatedSubject = "CoinCreatedSubject"
+	CoinCreatedSubject    = "CoinCreatedSubject"
+	AddressHistorySubject = "AddressHistorySubject"
 )
