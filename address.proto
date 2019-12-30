@@ -1,0 +1,11 @@
+syntax = "proto3";
+package coin_extender;
+
+import "google/protobuf/timestamp.proto";
+
+message Address {
+    string address = 1;
+    string symbol = 2;
+    string amount = 3;
+    google.protobuf.Timestamp created_at = 4;
+}
